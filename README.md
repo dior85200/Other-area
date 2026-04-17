@@ -170,6 +170,10 @@ button {
 <div class="btn-container">
   <button onclick="resetChecks()">清除勾選</button>
 </div>
+// 長輩模式
+function toggleElder() {
+  document.getElementById("mainCard").classList.toggle("elder");
+}
 
 // 長輩模式
 function toggleElder() {
