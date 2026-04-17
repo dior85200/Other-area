@@ -170,10 +170,13 @@ button {
 <div class="btn-container">
   <button onclick="resetChecks()">清除勾選</button>
 </div>
-// 長輩模式
-function toggleElder() {
-  document.getElementById("mainCard").classList.toggle("elder");
-}
+
+<div class="btn-container">
+  <button onclick="resetChecks()">清除勾選</button>
+</div>
+
+
+<script>
 
 // 長輩模式
 function toggleElder() {
@@ -184,6 +187,7 @@ function toggleElder() {
 function resetChecks() {
   document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked=false);
 }
+
 </script>
 <!-- 日程表 -->
 <div class="footer-img">
