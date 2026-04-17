@@ -1,125 +1,212 @@
-<車長上車物品>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>法鼓山行前確認清單</title>
-  <style>
-    body {
-      font-family: "Noto Sans TC", Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 20px;
-      line-height: 1.8;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法鼓山活動行前確認</title>
 
-    h1, h2, h3 {
-      color: #3a3a3a;
-    }
+<style>
+body {
+  font-family: "Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background-image: url('https://fagushan.ddm.org.tw/files/file_pool/1/0M005733797053262001/P75420150204010005s2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.8;
+}
 
-    .card {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 800px;
-      margin: 20px auto;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+/* 毛玻璃卡片 */
+.card {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(5px);
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
 
-    ul {
-      padding-left: 20px;
-    }
+/* 長輩模式 */
+.elder {
+  font-size: 1.3em;
+  line-height: 2;
+  font-weight: 600;
+}
 
-    li {
-      margin-bottom: 15px;
-    }
+.elder h1 { font-size: 34px; font-weight: 800; }
+.elder h2 { font-size: 26px; font-weight: 700; }
+.elder h3 { font-size: 22px; font-weight: 700; }
 
-    label {
-      cursor: pointer;
-    }
+.elder li,
+.elder span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
 
-    input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.2);
-    }
+/* 標題 */
+h1 { color: #b00020; text-align: center; margin-top: 0; }
+h2 { text-align: center; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
 
-    input[type="checkbox"]:checked + span {
-      text-decoration: line-through;
-      color: gray;
-      opacity: 0.7;
-    }
+h3 {
+  background: #f3f3f3;
+  padding: 6px 15px;
+  border-left: 5px solid #b00020;
+  margin-top: 25px;
+}
 
-    button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 6px;
-      background-color: #3a7bd5;
-      color: white;
-      cursor: pointer;
-      font-size: 14px;
-    }
+h4 { margin-top: 20px; }
 
-    button:hover {
-      background-color: #2a5cae;
-    }
-  </style>
+
+/* 勾選 */
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; }
+
+label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-top: 6px;
+  transform: scale(1.3);
+}
+
+input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* 按鈕 */
+.btn-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+button {
+  background-color: #b00020;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 底部圖片 */
+.footer-img {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-img img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.footer-img p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+</style>
 </head>
+
 <body>
 
-<div class="card">
-  <h1>法鼓山行前確認清單</h1>
+<div class="card" id="mainCard">
 
-  <h3>👜 袋子</h3>
-  <ul>
-    <li><label><input type="checkbox"><span>早課課誦單</span></label></li>
-    <li><label><input type="checkbox"><span>義工背心 ×3</span></label></li>
-    <li><label><input type="checkbox"><span>輕便雨衣 ×3</span></label></li>
-    <li><label><input type="checkbox"><span>塑膠（垃圾）袋</span></label></li>
-    <li><label><input type="checkbox"><span>醫藥箱 ×1</span></label></li>
-    <li><label><input type="checkbox"><span>DVD 影片</span></label></li>
-    <li><label><input type="checkbox"><span>聖號 CD</span></label></li>
-  </ul>
+<h1>法鼓山寶雲寺 朝山菩薩(通用版)</h1>
+<h2>04/18～04/19「朝山・巡禮・憶師恩」</h2>
 
-  <h3>✉️ 大信封</h3>
-  <ul>
-    <li><label><input type="checkbox"><span>各車名冊</span></label></li>
-    <li><label><input type="checkbox"><span>車次／車長聯絡單</span></label></li>
-    <li><label><input type="checkbox"><span>車資信封</span></label></li>
-    <ul>
-      <li><label><input type="checkbox"><span>已標註車次</span></label></li>
-      <li><label><input type="checkbox"><span>已標註車長</span></label></li>
-      <li><label><input type="checkbox"><span>已標註聯絡電話</span></label></li>
-    </ul>
-    <li><label><input type="checkbox"><span>打齋表</span></label></li>
-    <li><label><input type="checkbox"><span>筆</span></label></li>
-    <li><label><input type="checkbox"><span>貼紙</span></label></li>
-    <li><label><input type="checkbox"><span>夾板</span></label></li>
-    <li><label><input type="checkbox"><span>便條紙</span></label></li>
-    <li><label><input type="checkbox"><span>當日課程表</span></label></li>
-    <li><label><input type="checkbox"><span>布達事項單</span></label></li>
-  </ul>
+<div class="countdown" id="countdown"></div>
 
-  <h3>📦 整理箱</h3>
-  <ul>
-    <li><label><input type="checkbox"><span>回程藥石整理箱 ×2</span></label></li>
-    <li><label><input type="checkbox"><span>紅碗 ×3</span></label></li>
-    <li><label><input type="checkbox"><span>湯匙 ×3（已裝袋）</span></label></li>
-    <li><label><input type="checkbox"><span>司機便當（香積室準備）</span></label></li>
-  </ul>
-
-  <h3>🪧 其他</h3>
-  <ul>
-    <li><label><input type="checkbox"><span>舉牌</span></label></li>
-    <li><label><input type="checkbox"><span>消毒酒精*2 (前後門各準備一支）</span></label></li>
-  </ul>
-
-  <h3>✅ 最終確認</h3>
-  <ul>
-    <li><label><input type="checkbox"><span>全數備齊</span></label></li>
-    <li><label><input type="checkbox"><span>可出發</span></label></li>
-  </ul>
-
-  <button onclick="document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked=false)">清除所有勾選</button>
+<div class="btn-container">
+  <button onclick="toggleElder()">👴 大字模式</button>
 </div>
 
-</body>
-</html>
+<h3>📌 行前提醒</h3>
+<ul>
+<li>
+  <span style="color:red; font-weight:bold;">車長通知之時間地點
+集合,準時出發</span>  （逾時不候）
+</li>
+<li>請用後背包利於走路</li>
+</ul>
+
+<h3>✅ 行前確認清單</h3>
+
+<h4>🍱 餐食準備</h4>
+<ul>
+  <li><label><input type="checkbox"><span>早齋需自理(車上不提供)</span></label></li>
+  <li><label><input type="checkbox"><span>已攜帶湯匙或筷子(回程藥石用)(★不必帶便當盒）</span></label></li>
+</ul>
+
+<h4>🛏️ 住宿與個人物品</h4>
+<ul>
+  <li><label><input type="checkbox"><span>已準備後背包 方便朝山・巡禮。</span></label></li>
+  <li><label><input type="checkbox"><span>已準備睡袋</span></label></li>
+  <li><label><input type="checkbox"><span>已準備拖鞋</span></label></li>
+  <li><label><input type="checkbox"><span>已準備沐浴乳、洗髮精(總本山不提供)</span></label></li>
+  <li><label><input type="checkbox"><span>已準備牙刷、牙膏</span></label></li>
+  <li><label><input type="checkbox"><span>已準備毛巾</span></label></li>
+  <li><label><input type="checkbox"><span>已準備水杯</span></label></li>
+  <li><label><input type="checkbox"><span>已準備雨具</span></label></li>
+  <li><label><input type="checkbox"><span><strong>已準備白色透明雨衣（朝山必備）</strong></span></label></li>
+  <li><label><input type="checkbox"><span>已準備遮陽帽</span></label></li>
+  <li><label><input type="checkbox"><span>已準備外套與保暖衣物</span></label></li>
+  <li><label><input type="checkbox"><span>已準備替換衣物</span></label></li>
+  <li><label><input type="checkbox"><span>已攜帶健保卡</span></label></li>
+  <li><label><input type="checkbox"><span>已攜帶個人藥品</span></label></li>
+</ul>
+
+<h4>👕 服裝確認</h4>
+<ul>
+  <li><label><input type="checkbox"><span>已準備樸素衣褲</span></label></li>
+  <li><label><input type="checkbox"><span>已準備義工服(出坡義工)</span></label></li>
+</ul>
+
+<div class="btn-container">
+  <button onclick="resetChecks()">清除勾選</button>
+</div>
+
+
+<script>
+// 倒數計時
+const target = new Date("2026-04-18T07:30:00");
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = target - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").innerHTML = "🚍 已出發";
+    return;
+  }
+
+  const h = Math.floor(diff / (1000 * 60 * 60));
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("countdown").innerHTML =
+    `⏰ 距離出發還有：${h} 小時 ${m} 分 ${s} 秒`;
+}
+
+setInterval(updateCountdown, 1000);
+
+// 長輩模式
+function toggleElder() {
+  document.getElementById("mainCard").classList.toggle("elder");
+}
+
+// 清除勾選
+function resetChecks() {
+  document.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked=false);
+}
+</script>
+<!-- 日程表 -->
+<div class="footer-img">
+  <img src="https://raw.githubusercontent.com/dior85200/DDM-checklist/main/朝山日程表.jpg">
+  <p>🗓️ 朝山日程表</p>
+</div>
