@@ -172,7 +172,7 @@ button {
 </div>
 
 
-<script>
+
 
 
 // 長輩模式
