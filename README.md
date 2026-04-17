@@ -129,7 +129,7 @@ button {
 <h3>📌 行前提醒</h3>
 <ul>
 <li>
-  <span style="color:red; font-weight:bold;">車長通知之時間地點
+  <span style="color:red; font-weight:bold;">依車長通知之時間地點
 集合,準時出發</span>  （逾時不候）
 </li>
 <li>請用後背包利於走路</li>
