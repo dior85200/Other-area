@@ -173,27 +173,7 @@ button {
 
 
 <script>
-// 倒數計時
-const target = new Date("2026-04-18T07:30:00");
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = target - now;
-
-  if (diff <= 0) {
-    document.getElementById("countdown").innerHTML = "🚍 已出發";
-    return;
-  }
-
-  const h = Math.floor(diff / (1000 * 60 * 60));
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-
-  document.getElementById("countdown").innerHTML =
-    `⏰ 距離出發還有：${h} 小時 ${m} 分 ${s} 秒`;
-}
-
-setInterval(updateCountdown, 1000);
 
 // 長輩模式
 function toggleElder() {
